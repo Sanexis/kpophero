@@ -49,7 +49,7 @@ main {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-.first-block .first-block-content-bottles {
+.first-block .first-block-content-albums {
   z-index: 2;
 }
 .first-block .books {
@@ -66,7 +66,7 @@ main {
     font-size: 41px !important;
     margin-top: 238px !important;
   }
-  .first-block .first-block-content-bottles {
+  .first-block .first-block-content-albums {
     margin: 130px auto 0 auto !important;
     width: auto;
   }
@@ -76,31 +76,12 @@ main {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .first-block .lemon {
-    width: 50%;
-  }
   .first-block .first-block-content {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
-  .first-block .first-block-content-bottles {
-    height: 420px;
-  }
-  .first-block .first-hmel {
-    width: 50%;
-    right: -65px !important;
-  }
-  .first-block .second-hmel {
-    width: 50%;
-  }
-  .first-block .first-bottle {
-    height: 360px;
-  }
-  .first-block .second-bottle {
-    height: 360px;
-  }
-  .first-block .central-bottle {
+  .first-block .first-block-content-albums {
     height: 420px;
   }
   .first-block .first-block-content-title {
@@ -109,26 +90,6 @@ main {
     margin-top: 0;
     position: static;
   }
-}
-.first-block .lemon {
-  top: 30%;
-  position: absolute;
-  left: -50px;
-}
-.first-block .first-hmel {
-  position: absolute;
-  right: 0;
-  top: 15%;
-}
-.first-block .second-hmel {
-  position: absolute;
-  right: 14%;
-  top: 57%;
-}
-.first-block .second-hmel {
-  position: absolute;
-  right: 14%;
-  top: 57%;
 }
 .first-block-content {
   display: flex;
@@ -145,98 +106,6 @@ main {
   letter-spacing: 0.085em;
   color: white;
   width: 623px;
-}
-.first-block-content .first-bottle:hover {
-  animation: FB-animation 0.4s linear 1 normal forwards;
-}
-.first-block-content .first-bottle:not(:hover) {
-  animation: FB-animation-reverse 0.4s linear 1 normal forwards;
-}
-@keyframes FB-animation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-50px);
-    scale: 1.2;
-  }
-  100% {
-    transform: translateX(0px);
-    scale: 1.3;
-    z-index: 2;
-  }
-}
-@keyframes FB-animation-reverse {
-  0% {
-    transform: translateX(0px);
-    scale: 1.3;
-    z-index: 2;
-  }
-  50% {
-    transform: translateX(-50px);
-    scale: 1.2;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.first-block-content .second-bottle:hover {
-  animation: SB-animation 0.4s linear 0.4s 1 normal forwards;
-}
-.first-block-content .second-bottle:not(:hover) {
-  animation: SB-animation-reverse 0.4s linear 1 normal forwards;
-}
-@keyframes SB-animation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(50px);
-    scale: 1.2;
-  }
-  100% {
-    transform: translateX(0px);
-    scale: 1.3;
-    z-index: 2;
-  }
-}
-@keyframes SB-animation-reverse {
-  0% {
-    transform: translateX(0px);
-    scale: 1.3;
-    z-index: 2;
-  }
-  50% {
-    transform: translateX(50px);
-    scale: 1.2;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.first-block-content .central-bottle:hover {
-  animation: CB-animation 0.4s linear 0s 1 normal forwards;
-}
-.first-block-content .central-bottle:not(:hover) {
-  animation: CB-animation-reverse 0.4s linear 1 normal forwards;
-}
-@keyframes CB-animation {
-  0% {
-    scale: 1;
-  }
-  100% {
-    scale: 1.2;
-    z-index: 2;
-  }
-}
-@keyframes CB-animation-reverse {
-  0% {
-    scale: 1.2;
-    z-index: 2;
-  }
-  100% {
-    scale: 1;
-  }
 }
 
 .first-block.albums {
@@ -735,7 +604,7 @@ header .header-socials .header-socials-item:hover {
     bottom: -10px;
   }
 }
-.fourth-block .bottles-block {
+.fourth-block .albums-block {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -744,13 +613,13 @@ header .header-socials .header-socials-item:hover {
   transition: 0.5s ease;
   margin-bottom: 40px;
 }
-.fourth-block .bottles-block > *:nth-child(n+5) {
+.fourth-block .albums-block > *:nth-child(n+5) {
   display: none;
 }
-.fourth-block .bottles-block.open > *:nth-child(n+5) {
+.fourth-block .albums-block.open > *:nth-child(n+5) {
   display: block;
 }
-.fourth-block .bottle-block {
+.fourth-block .album-block {
   width: 559px;
   height: 475px;
   background: rgba(1, 1, 1, 0.24);
@@ -759,14 +628,14 @@ header .header-socials .header-socials-item:hover {
   border: rgba(227, 0, 136, 0) solid 1px;
 }
 @media (max-width: 600px) {
-  .fourth-block .bottle-block {
+  .fourth-block .album-block {
     overflow: hidden;
   }
 }
-.fourth-block .bottle-block:hover {
+.fourth-block .album-block:hover {
   border: #e30088 solid 1px;
 }
-.fourth-block .bottle-block .bottle-block__background {
+.fourth-block .album-block .album-block__background {
   background: linear-gradient(267deg, #1b1b1b 2.66%, rgba(33, 33, 33, 0) 69.02%);
   background-position-x: right;
   background-repeat: no-repeat;
@@ -775,14 +644,14 @@ header .header-socials .header-socials-item:hover {
   width: calc(100% + 1px);
   height: calc(100% + 2px);
 }
-.fourth-block .bottle-block .buy-buttons {
+.fourth-block .album-block .buy-buttons {
   position: absolute;
   right: 23px;
   bottom: 35px;
   display: flex;
   gap: 11px;
 }
-.fourth-block .bottle-block .buy-buttons .basket {
+.fourth-block .album-block .buy-buttons .basket {
   width: 55px;
   height: 55px;
   border-radius: 100%;
@@ -792,7 +661,7 @@ header .header-socials .header-socials-item:hover {
   color: white;
   background: #e30088;
 }
-.fourth-block .bottle-block .buy-buttons .buy-button {
+.fourth-block .album-block .buy-buttons .buy-button {
   width: 190px;
   height: 55px;
   border-radius: 36px;
@@ -805,46 +674,46 @@ header .header-socials .header-socials-item:hover {
   font-style: normal;
   font-weight: 600;
 }
-.fourth-block .bottle-block .buy-buttons .buy-button,
-.fourth-block .bottle-block .buy-buttons .basket {
+.fourth-block .album-block .buy-buttons .buy-button,
+.fourth-block .album-block .buy-buttons .basket {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.fourth-block .bottle-block .buy-buttons .buy-button:hover,
-.fourth-block .bottle-block .buy-buttons .basket:hover {
+.fourth-block .album-block .buy-buttons .buy-button:hover,
+.fourth-block .album-block .buy-buttons .basket:hover {
   cursor: pointer;
   filter: brightness(0.7);
 }
-.fourth-block .bottle-block-info {
+.fourth-block .album-block-info {
   position: absolute;
   margin: 28px 10px 25px 28px;
   width: 280px;
   z-index: 3;
 }
 @media (max-width: 600px) {
-  .fourth-block .bottle-block-info {
+  .fourth-block .album-block-info {
     text-shadow: 2px 2px 2px black;
     margin: 15px;
     width: 250px;
   }
-  .fourth-block .bottle-block-info .info {
+  .fourth-block .album-block-info .info {
     font-size: 16px !important;
   }
-  .fourth-block .bottle-block-info .title {
+  .fourth-block .album-block-info .title {
     font-size: 12px !important;
   }
-  .fourth-block .bottle-block-info .bottle-block-info__about {
+  .fourth-block .album-block-info .album-block-info__about {
     margin-top: 8%;
   }
-  .fourth-block .bottle-block-info .bottle-block-info__about {
+  .fourth-block .album-block-info .album-block-info__about {
     display: flex;
     flex-direction: column;
     margin: 0;
     grid-row-gap: 2px;
   }
 }
-.fourth-block .bottle-block-info__title {
+.fourth-block .album-block-info__title {
   font-weight: 800;
   font-size: 40px;
   line-height: 109.3%;
@@ -856,28 +725,28 @@ header .header-socials .header-socials-item:hover {
   display: -webkit-box;
   overflow: hidden;
 }
-.fourth-block .bottle-block-info__text {
+.fourth-block .album-block-info__text {
   font-weight: 600;
   font-size: 12px;
   line-height: 109.3%;
   letter-spacing: 0.085em;
   color: white;
 }
-.fourth-block .bottle-block-info__about {
+.fourth-block .album-block-info__about {
   margin-top: 38px;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.fourth-block .bottle-block-info__about .item {
+.fourth-block .album-block-info__about .item {
   display: grid;
   grid-template-columns: 18px 2px 1fr;
   gap: 16px;
   align-items: center;
   height: 70px;
 }
-.fourth-block .bottle-block-info__about .item .title {
+.fourth-block .album-block-info__about .item .title {
   transform: rotate(-90deg);
   font-weight: 600;
   font-size: 16px;
@@ -885,31 +754,33 @@ header .header-socials .header-socials-item:hover {
   text-align: center;
   justify-self: center;
 }
-.fourth-block .bottle-block-info__about .item .vertical-bar {
+.fourth-block .album-block-info__about .item .vertical-bar {
   width: 2px;
   height: 49px;
   background-color: #e30088;
 }
-.fourth-block .bottle-block-info__about .item .info {
+.fourth-block .album-block-info__about .item .info {
   font-weight: 800;
   font-size: 20px;
   line-height: 109.3%;
 }
-.fourth-block .bottle-block .bottle-picture {
+.fourth-block .album-block .album-picture {
   position: absolute;
   right: 34px;
   top: 18px;
 }
-.fourth-block .bottle-block .bottle-picture img {
+.fourth-block .album-block .album-picture img {
   width: 202px;
   height: 332px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 768px) {
-  .fourth-block .bottle-block .bottle-picture img {
+  .fourth-block .album-block .album-picture img {
     filter: brightness(0.8);
   }
 }
-.fourth-block .bottle-picture.active {
+.fourth-block .album-picture.active {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -922,7 +793,7 @@ header .header-socials .header-socials-item:hover {
   align-items: center;
   justify-content: center;
 }
-.fourth-block .bottle-picture.active img {
+.fourth-block .album-picture.active img {
   width: 282px;
   height: 413px;
 }
@@ -1480,16 +1351,16 @@ footer .shadow p {
   transition: 1s ease;
 }
 
-.bottle-block-info__text.show {
+.album-block-info__text.show {
   bottom: 0 !important;
   justify-content: flex-end !important;
   background-color: #141311;
   transition: 0.5s ease;
 }
-.bottle-block-info__text.show .fas {
+.album-block-info__text.show .fas {
   transform: rotate(180deg);
 }
-.bottle-block-info__text.show p {
+.album-block-info__text.show p {
   max-height: 500px;
 }
 
@@ -1612,7 +1483,7 @@ footer .shadow p {
 }
 
 @media (max-width: 600px) {
-  .bottle-block-info__text {
+  .album-block-info__text {
     position: absolute;
     bottom: 0;
     height: 100%;
@@ -1626,7 +1497,7 @@ footer .shadow p {
     padding: 0 8px 8px 8px;
     transition: 1.5s ease;
   }
-  .bottle-block-info__text p {
+  .album-block-info__text p {
     max-height: 0;
     overflow: hidden;
     transition: max-height 1s ease;
@@ -1674,4 +1545,15 @@ footer .shadow p {
   font-weight: 600;
   right: 40px;
   bottom: 19px;
+}
+
+.error-message__email {
+  font-size: 15px;
+  margin: 4px 0;
+  color: #9f1b01;
+  display: none;
+}
+
+.error-message__email.visible {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

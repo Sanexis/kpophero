@@ -1,42 +1,8 @@
-
-
-const layers = document.querySelectorAll('.layer');
-
-function handleMouseMove(e) {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    layers.forEach(layer => {
-        const speed = layer.getAttribute('data-speed');
-        const xShift = (x - window.innerWidth / 2) * speed / 200;
-        const yShift = (y - window.innerHeight / 2) * speed / 100;
-        layer.style.transform = `translate(${xShift}px, ${yShift}px)`;
-    });
-}
-
-window.addEventListener('mousemove', handleMouseMove);
-
-if (window.innerWidth < 920) {
-    window.removeEventListener('mousemove', handleMouseMove);
-}
-
-
-const menuItems = document.querySelectorAll('.beer-select__item');
-
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        menuItems.forEach(item => {
-            item.classList.remove('selected');
-        });
-        item.classList.add('selected');
-    });
-});
-
-
 const ShowMoreMap = document.getElementById('show-more-map');
 const ShowMoreMapBlock = document.querySelector('.map-modal__block');
 const ShowMoreMapBlockClose = document.querySelector('.map-modal__block__close');
 
+if(ShowMoreMap){
 ShowMoreMap.addEventListener('click', function () {
     ShowMoreMapBlock.style.display = 'block';
 });
@@ -44,19 +10,7 @@ ShowMoreMap.addEventListener('click', function () {
 ShowMoreMapBlockClose.addEventListener('click', function () {
     ShowMoreMapBlock.style.display = 'none';
 });
-
-
-
-const showMoreAboutBeerBlocks = document.querySelectorAll('.show-more-about-beer');
-showMoreAboutBeerBlocks.forEach((el) => {
-    el.addEventListener('click', () => {
-        const showMoreTextBlock = el.parentNode;
-        const bottleBlock = showMoreTextBlock.parentNode;
-        if (showMoreTextBlock && bottleBlock) {
-            showMoreTextBlock.classList.toggle('show');
-        }
-    });
-});
+}
 
 const hamb = document.querySelector('#hamb');
 const menu = document.querySelector('.header-items');
@@ -80,17 +34,18 @@ hamb.addEventListener('click', function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const bottlePicture = document.querySelectorAll(".bottle-picture img");
+    const albumPicture = document.querySelectorAll(".album-picture img");
     var clickCount = 0;
 
-    bottlePicture.forEach((picture) =>{
+    if(albumPicture){
+    albumPicture.forEach((picture) =>{
         picture.addEventListener("click", function () {
             picture.parentElement.classList.toggle("active");
         });
     })
 
-    const albumsBlock = document.querySelector(".bottles-block")
-    if(bottlePicture.length > 4){
+    const albumsBlock = document.querySelector(".albums-block")
+    if(albumPicture.length > 4){
         const showmore = document.querySelector(".showmore-button");
         showmore.style.display = "flex";
         showmore.addEventListener('click',()=>{
@@ -103,4 +58,37 @@ document.addEventListener("DOMContentLoaded", function () {
             clickCount++;
         })
     }
+}
+
+let emailInput = document.getElementById("emailInput");
+        if (emailInput) {
+            emailInput.addEventListener("input", function () {
+                validateEmail(this);
+            });
+    }
+
+let inputElements = document.querySelectorAll(".onlyletters");
+
+    if(inputElements){
+    inputElements.forEach(function(inputElement) {
+      inputElement.addEventListener("input", function() {
+        let inputValue = inputElement.value;
+
+        let lettersOnly = inputValue.replace(/[^a-zA-Z\sа-яА-Я]/g, '');
+
+        inputElement.value = lettersOnly;
+      });
+    });
+}
 });
+
+
+function validateEmail(input) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (emailPattern.test(input.value)) {
+        input.nextElementSibling.classList.remove("visible")
+    } else {
+        input.nextElementSibling.classList.add("visible")
+    }
+}

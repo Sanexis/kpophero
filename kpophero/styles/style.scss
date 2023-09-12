@@ -52,7 +52,7 @@ main {
   background-attachment: fixed;
   background-repeat: no-repeat;
 
-  .first-block-content-bottles {
+  .first-block-content-albums {
     z-index: 2;
   }
 
@@ -73,7 +73,7 @@ main {
       margin-top: 238px !important;
     }
 
-    .first-block-content-bottles {
+    .first-block-content-albums {
       margin: 130px auto 0 auto !important;
       width: auto;
     }
@@ -82,9 +82,6 @@ main {
   @media (min-width: 280px) and (max-width: 767px) {
     height: fit-content;
 
-    .lemon {
-      width: 50%;
-    }
 
     .first-block-content {
       display: flex;
@@ -92,28 +89,7 @@ main {
       gap: 30px;
     }
 
-    .first-block-content-bottles {
-      height: 420px;
-    }
-
-    .first-hmel {
-      width: 50%;
-      right: -65px !important;
-    }
-
-    .second-hmel {
-      width: 50%;
-    }
-
-    .first-bottle {
-      height: 360px;
-    }
-
-    .second-bottle {
-      height: 360px;
-    }
-
-    .central-bottle {
+    .first-block-content-albums {
       height: 420px;
     }
 
@@ -125,29 +101,6 @@ main {
     }
   }
 
-  .lemon {
-    top: 30%;
-    position: absolute;
-    left: -50px;
-  }
-
-  .first-hmel {
-    position: absolute;
-    right: 0;
-    top: 15%;
-  }
-
-  .second-hmel {
-    position: absolute;
-    right: 14%;
-    top: 57%;
-  }
-
-  .second-hmel {
-    position: absolute;
-    right: 14%;
-    top: 57%;
-  }
 
   &-content {
     display: flex;
@@ -164,126 +117,6 @@ main {
       letter-spacing: 0.085em;
       color: white;
       width: 623px;
-    }
-
-    .first-bottle {
-      &:hover {
-        animation: FB-animation 0.4s linear 1 normal forwards;
-      }
-
-      &:not(:hover) {
-        animation: FB-animation-reverse 0.4s linear 1 normal forwards;
-      }
-
-      @keyframes FB-animation {
-        0% {
-          transform: translateX(0);
-        }
-
-        50% {
-          transform: translateX(-50px);
-          scale: (1.2);
-        }
-
-        100% {
-          transform: translateX(0px);
-          scale: (1.3);
-          z-index: 2;
-        }
-      }
-
-      @keyframes FB-animation-reverse {
-        0% {
-          transform: translateX(0px);
-          scale: (1.3);
-          z-index: 2;
-        }
-
-        50% {
-          transform: translateX(-50px);
-          scale: (1.2);
-        }
-
-        100% {
-          transform: translateX(0);
-        }
-      }
-    }
-
-    .second-bottle {
-      &:hover {
-        animation: SB-animation 0.4s linear 0.4s 1 normal forwards;
-      }
-
-      &:not(:hover) {
-        animation: SB-animation-reverse 0.4s linear 1 normal forwards;
-      }
-
-      @keyframes SB-animation {
-        0% {
-          transform: translateX(0);
-        }
-
-        50% {
-          transform: translateX(50px);
-          scale: (1.2);
-        }
-
-        100% {
-          transform: translateX(0px);
-          scale: (1.3);
-          z-index: 2;
-        }
-      }
-
-      @keyframes SB-animation-reverse {
-        0% {
-          transform: translateX(0px);
-          scale: (1.3);
-          z-index: 2;
-        }
-
-        50% {
-          transform: translateX(50px);
-          scale: (1.2);
-        }
-
-        100% {
-          transform: translateX(0);
-        }
-      }
-    }
-
-    .central-bottle {
-      &:hover {
-        animation: CB-animation 0.4s linear 0s 1 normal forwards;
-      }
-
-      &:not(:hover) {
-        animation: CB-animation-reverse 0.4s linear 1 normal forwards;
-      }
-
-      @keyframes CB-animation {
-        0% {
-          scale: (1);
-        }
-
-        100% {
-          scale: (1.2);
-          z-index: 2;
-        }
-      }
-
-      @keyframes CB-animation-reverse {
-        0% {
-          scale: (1.2);
-          z-index: 2;
-        }
-
-        100% {
-          scale: (1);
-        }
-      }
     }
   }
 }
@@ -824,7 +657,7 @@ header {
     }
   }
 
-  .bottles-block {
+  .albums-block {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -837,13 +670,13 @@ header {
     }
   }
 
-  .bottles-block.open {
+  .albums-block.open {
     > *:nth-child(n + 5) {
       display: block;
     }
   }
 
-  .bottle-block {
+  .album-block {
     width: 559px;
     height: 475px;
     background: rgba(1, 1, 1, 0.24);
@@ -860,7 +693,7 @@ header {
       border: #e30088 solid 1px;
     }
 
-    .bottle-block__background {
+    .album-block__background {
       background: linear-gradient(
         267deg,
         #1b1b1b 2.66%,
@@ -933,11 +766,11 @@ header {
           font-size: 12px !important;
         }
 
-        .bottle-block-info__about {
+        .album-block-info__about {
           margin-top: 8%;
         }
 
-        .bottle-block-info__about {
+        .album-block-info__about {
           display: flex;
           flex-direction: column;
           margin: 0;
@@ -1004,7 +837,7 @@ header {
       }
     }
 
-    .bottle-picture {
+    .album-picture {
       position: absolute;
       right: 34px;
       top: 18px;
@@ -1012,6 +845,7 @@ header {
       img {
         width: 202px;
         height: 332px;
+        object-fit: cover;
 
         @media (max-width: 768px) {
           filter: brightness(0.8);
@@ -1020,7 +854,7 @@ header {
     }
   }
 
-  .bottle-picture.active {
+  .album-picture.active {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1660,7 +1494,7 @@ footer {
   }
 }
 
-.bottle-block-info__text.show {
+.album-block-info__text.show {
   bottom: 0 !important;
   justify-content: flex-end !important;
   background-color: #141311;
@@ -1814,7 +1648,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .bottle-block-info__text {
+  .album-block-info__text {
     position: absolute;
     bottom: 0;
     height: 100%;
@@ -1876,4 +1710,15 @@ font-weight: 600;
 right: 40px;
 bottom: 19px;
 }
+}
+
+.error-message__email{
+  font-size: 15px;
+  margin: 4px 0;
+  color: #9f1b01;
+  display: none;
+}
+
+.error-message__email.visible{
+  display: block;
 }

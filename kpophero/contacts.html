@@ -83,9 +83,10 @@
                 <p class="title">Свяжитесь с нами!</p>
                 <p class="discription">Оставьте нам сообщение с любым интересующим вопросом и мы ответим вам как можно скорее!</p>
                 <div class="form">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Фамилия">
-                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Имя" class="onlyletters">
+                    <input type="text" placeholder="Фамилия" class="onlyletters">
+                    <input type="text" placeholder="Email" id="emailInput">
+                    <div class="error-message__email">Введите корректный email</div>
                     <input type="text" placeholder="Ваше сообщение">
                 </div>
             </div>
@@ -110,4 +111,5 @@
       </footer>
     </main>
   </body>
+  <script src="./scripts/main.js"></script>
 </html>
