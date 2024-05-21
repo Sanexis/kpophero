@@ -194,6 +194,23 @@ main {
   position: relative;
   display: flex;
   justify-content: space-between;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.first-block.contacts .contact-us button {
+  width: 250px;
+  height: 60px;
+  border-radius: 36px;
+  border: 2px solid #e30088;
+  background: #e30088;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 .first-block.contacts .contact-us .contact-us__form {
   width: 430px;
@@ -215,6 +232,25 @@ main {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  color: white;
+}
+.first-block.contacts .contact-us .contact-us__form .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.first-block.contacts .contact-us .contact-us__form .form form button {
+  width: 250px;
+  height: 60px;
+  border-radius: 36px;
+  border: 2px solid #e30088;
+  background: #e30088;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 .first-block.contacts .contact-us .contact-us__form .form input {
   height: 57px;
@@ -261,7 +297,7 @@ header .header-logo img {
 }
 header .header-items {
   display: flex;
-  margin: 0 230px 0 83px;
+  margin: 0 auto 0 83px;
   gap: 26px;
 }
 header .header-items .header-item {

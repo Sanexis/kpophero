@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,9 +40,9 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>KPOP Hero</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <main>
       <div class="first-block contacts">
         <div class="site-shadow active"></div>
@@ -70,6 +70,7 @@
               <a href="" target="_blank" class="header-socials-item"
                 ><i class="fab fa-instagram"></i
               ></a>
+              <a href="login.html" style="margin-left: 40px;" class="header-socials-item"><i class="fa-solid fa-user"></i></a>
             </div>
             <div class="hamb">
               <div class="hamb__field" id="hamb">
@@ -79,16 +80,17 @@
             </div>
           </header>
           <div class="contact-us">
-            <div class="contact-us__form">
-                <p class="title">Свяжитесь с нами!</p>
-                <p class="discription">Оставьте нам сообщение с любым интересующим вопросом и мы ответим вам как можно скорее!</p>
-                <div class="form">
-                    <input type="text" placeholder="Имя" class="onlyletters">
-                    <input type="text" placeholder="Фамилия" class="onlyletters">
-                    <input type="text" placeholder="Email" id="emailInput">
-                    <div class="error-message__email">Введите корректный email</div>
-                    <input type="text" placeholder="Ваше сообщение">
-                </div>
+            <div>
+              <div id="authStatus"></div>
+              <div id="contactForm" class="contact-us__form" style="display: none;">
+                  <p class="title">Свяжитесь с нами!</p>
+                  <p class="discription">Оставьте нам сообщение с любым интересующим вопросом и мы ответим вам как можно скорее!</p>
+                  <div class="form">
+                      <input type="text" id="messageInput" placeholder="Ваше сообщение">
+                      <button type="button" onclick="sendMessage()">Отправить</button>
+                  </div>
+                  <p style="margin-top: 12px;" id="messageStatus"></p>
+              </div>
             </div>
             <div class="about-block">
                 <div class="title">Часы работы:</div>
@@ -110,6 +112,7 @@
         </div>
       </footer>
     </main>
-  </body>
-  <script src="./scripts/main.js"></script>
+
+    <script src="./scripts/main.js"></script>
+</body>
 </html>

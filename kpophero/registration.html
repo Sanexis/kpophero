@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/6bf2c86cbc.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./static/favicon/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>KPOP Hero</title>
+</head>
+
+<body>
+  <main>
+    <div class="first-block contacts">
+      <div class="site-shadow active"></div>
+      <div class="content">
+        <header>
+          <div class="header-logo">
+            <img src="./static/logo.png" alt="" />
+          </div>
+          <div class="header-items">
+            <a href="index.html" class="header-item button">О компании</a>
+            <a href="albums.html" class="header-item button">Альбомы</a>
+            <a href="about-us.html" class="header-item button">О нас</a>
+            <a href="contacts.html" class="header-item button">Контакты</a>
+          </div>
+          <div class="header-socials">
+            <a href="" target="_blank" class="header-socials-item"><i class="fab fa-whatsapp"></i></a>
+            <a href="" target="_blank" class="header-socials-item"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank" class="header-socials-item"><i class="fab fa-telegram"></i></a>
+            <a href="" target="_blank" class="header-socials-item"><i class="fab fa-instagram"></i></a>
+            <a href="login.html" style="margin-left: 40px;" class="header-socials-item"><i class="fa-solid fa-user"></i></a>
+          </div>
+          <div class="hamb">
+            <div class="hamb__field" id="hamb">
+              <span class="bar"></span> <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </header>
+        <div class="contact-us">
+          <div class="contact-us__form">
+            <p class="title">Свяжитесь с нами!</p>
+            <p class="discription">Оставьте нам сообщение с любым интересующим вопросом и мы ответим вам как можно
+              скорее!</p>
+            <div class="form">
+              <form id="registrationForm">
+                <label for="login">Логин:</label>
+                <input type="text" id="login" name="login" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <button type="button" style="margin-top: 12px;" onclick="register()">Регистрация</button>
+            </form>
+            <p id="registerMessage"></p>
+            </div>
+          </div>
+          <div class="about-block">
+            <div class="title">Часы работы:</div>
+            <div class="text">пн - пт 9:00 - 20:00</div>
+            <div class="text">сб - вс 10:00 - 18:00</div>
+            <div class="title">Адрес</div>
+            <div class="text">г. Витебск, ул. Правды, 19</div>
+            <div class="title">Помощь:</div>
+            <div class="text">adressss@gmail.com</div>
+            <div class="text">+375 (33) 265-65-45</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-contacts">
+      <div class="shadow">
+        <p>© 2014-2023</p>
+      </div>
+      </div>
+    </footer>
+  </main>
+</body>
+<script src="./scripts/main.js"></script>
+
+</html>

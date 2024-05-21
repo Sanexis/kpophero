@@ -92,3 +92,75 @@ function validateEmail(input) {
         input.nextElementSibling.classList.add("visible")
     }
 }
+
+function register() {
+    let login = document.getElementById('login').value;
+    let password = document.getElementById('password').value;
+    let age = document.getElementById('age').value;
+    let registerMessage = document.getElementById('registerMessage');
+    
+    if (login.length < 5) {
+        registerMessage.textContent = 'Ошибка при вводе логина!';
+        return;
+    }
+    
+    if (password.length < 5) {
+        registerMessage.textContent = 'Ошибка при вводе пароля!';
+        return;
+    }
+    
+    age = parseInt(age);
+    if (isNaN(age) || age < 0 || age > 120) {
+        registerMessage.textContent = 'Ошибка при вводе возраста!';
+        return;
+    }
+    
+    localStorage.setItem('user_' + login, JSON.stringify({ password: password, age: age }));
+    registerMessage.textContent = `Привет, ${login}! Регистрация успешна.`;
+}
+
+function login() {
+    let login = document.getElementById('loginLogin').value;
+    let password = document.getElementById('loginPassword').value;
+    let loginMessage = document.getElementById('loginMessage');
+    
+    let userData = localStorage.getItem('user_' + login);
+    if (userData) {
+        userData = JSON.parse(userData);
+        if (userData.password === password) {
+            localStorage.setItem('loggedInUser', login);
+            loginMessage.textContent = `Привет, ${login}! Авторизация успешна!.`;
+            window.location.href = 'contacts.html'; 
+        } else {
+            loginMessage.textContent = 'Неверный пароль!';
+        }
+    } else {
+        loginMessage.textContent = 'Пользователь не найден!';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const authStatus = document.getElementById("authStatus");
+    const contactForm = document.getElementById("contactForm");
+
+
+    if(authStatus && contactForm){
+        if (localStorage.getItem("loggedInUser")) {
+            authStatus.textContent = `Вы авторизованы как ${localStorage.getItem("loggedInUser")}`;
+            contactForm.style.display = "block";
+        } else {
+            authStatus.textContent = "Выполните авторизацию чтобы отправить нам сообщение";
+        }
+    }
+});
+
+function sendMessage() {
+    const messageInput = document.getElementById("messageInput").value;
+    const messageStatus = document.getElementById("messageStatus");
+
+    if (messageInput.trim() === "") {
+        messageStatus.textContent = "Сообщение не может быть пустым.";
+    } else {
+        messageStatus.textContent = "Сообщение отправлено!";
+    }
+}
